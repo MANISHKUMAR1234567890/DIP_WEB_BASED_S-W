@@ -1,4 +1,4 @@
-cv2
-numpy
-PIL
 streamlit
+opencv-python-headless
+numpy
+pillow
