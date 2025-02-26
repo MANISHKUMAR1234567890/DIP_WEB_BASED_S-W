@@ -11,7 +11,7 @@ with subtab[1]:
     image_np = np.array(image)
     brightness = st.slider("Adjust Brightness", -100, 100, 0)
     bright_image = cv2.convertScaleAbs(image_np, alpha=1, beta=brightness)
-    st.image(bright_image,caption="Brighten image",use_column_width=True)
+    st.image(bright_image,caption="Brighten image",use_column_width=False)
     st.code("""
             import numpy as np
             import cv2
@@ -30,7 +30,7 @@ with subtab[2]:
     s_max = st.slider("Select Max Output Intensity", 0, 255, 255)
     contrast_stretched = ((image_np - r_min) / (r_max - r_min)) * (s_max - s_min) + s_min
     contrast_stretched = np.clip(contrast_stretched, s_min, s_max).astype(np.uint8)
-    st.image(contrast_stretched,caption="Contrast Stretched",use_column_width=True)
+    st.image(contrast_stretched,caption="Contrast Stretched",use_column_width=False)
     st.code("""
              import numpy as np
             import cv2
@@ -50,7 +50,7 @@ with subtab[3]:
     image = Image.open(uploaded_file).convert("L") 
     image_np = np.array(image)
     equalized_image = cv2.equalizeHist(image_np)
-    st.image(equalized_image,caption="Histogram equilized image")
+    st.image(equalized_image,caption="Histogram equilized image",use_column_width=False)
     st.code("""
             import numpy as np
             import cv2
