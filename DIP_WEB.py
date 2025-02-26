@@ -46,7 +46,7 @@ if uploaded_file:
 
     with tabs[2]:
         subtab = st.tabs(["Select",'Brightness Adjustment','Contrast Adjustment','Histogram Equilization'])
-       exec(open("pixel_processing.py").read())
+        exec(open("pixel_processing.py").read())
     with tabs[3]:
         subtab = st.tabs(["Select",'Smothening','Sharpening'])
         with subtab[1]:
