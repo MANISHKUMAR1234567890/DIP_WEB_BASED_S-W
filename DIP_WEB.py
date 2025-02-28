@@ -49,20 +49,4 @@ if uploaded_file:
         exec(open("pixel_processing.py").read())
     with tabs[3]:
         subtab = st.tabs(["Select",'Smothening','Sharpening'])
-        with subtab[1]:
-            subsubtab = st.tabs(["Select",'Mean filter','Gaussian Filter','Median Filter'])
-            with subsubtab[1]:
-                st.write("Apply Mean Filter")
-            with subsubtab[2]:
-                st.write("Apply Gaussian Filter")
-            with subsubtab[3]:
-                st.write("Apply Median Filter")
-        
-        with subtab[2]:
-            subsubtab = st.tabs(["Select",'Laplacian filter', 'Sobel Filter','Unsharp mask'])
-            with subsubtab[1]:
-                st.write("Apply Laplacian Filter")
-            with subsubtab[2]:
-                st.write("Apply Sobel Filter")
-            with subsubtab[3]:
-                st.write("Apply Unsharp Mask")
+        exec(open("spatial_filter.py").read())
