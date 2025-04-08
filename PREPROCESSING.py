@@ -33,7 +33,7 @@ with subtab[1]:
 
         if apply_conversion:
             converted_img = convert_image(image, option)
-            st.image(converted_img, caption=f"Converted Image: {option}", use_column_width=False)
+            st.image(converted_img, caption=f"Converted Image: {option}", use_container_width=False)
             if option == "Grayscale":
                 st.code("""
 import cv2
@@ -80,7 +80,7 @@ convert_to_rgb("path")
             
             
         n_converted_img =normalization(Image.open(uploaded_file))
-        st.image(n_converted_img, caption=f"Normalized Image", use_column_width=False)
+        st.image(n_converted_img, caption=f"Normalized Image", use_container_width=False)
         st.code("""
         import numpy as np
         import cv2
@@ -109,7 +109,7 @@ convert_to_rgb("path")
         # Crop the image
                 cropped_image = crop_image_array[y_start:y_end, x_start:x_end]
                 
-                st.image(cropped_image,caption=f"Cropped Image",use_column_width=False)
+                st.image(cropped_image,caption=f"Cropped Image",use_container_width=False)
 
                 st.code(""" 
                         import numpy as np
@@ -139,7 +139,7 @@ convert_to_rgb("path")
             resized_image = cv2.resize(image, (new_width, new_height))
 
     # Display the resized image
-            st.image(resized_image, caption=f"Resized Image ({new_width}x{new_height})", use_column_width=False)
+            st.image(resized_image, caption=f"Resized Image ({new_width}x{new_height})", use_container_width=False)
             st.code("""
                     import cv2
                     import numpy as np
