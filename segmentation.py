@@ -14,7 +14,7 @@ with subtab[1]:
     otsu_image = Image.fromarray(otsu_thresh)
 
    
-    st.image(otsu_image,caption="Otsu thresholded image", use_column_width=False)
+    st.image(otsu_image,caption="Otsu thresholded image", use_container_width=False)
     st.code("""
     import numpy as np
     import cv2
@@ -33,7 +33,7 @@ with subtab[2]:
     _, global_thresh = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY) 
     otsu_image = Image.fromarray(global_thresh)
 
-    st.image(otsu_image,caption="Thresholded image", use_column_width=False)
+    st.image(otsu_image,caption="Thresholded image", use_container_width=False)
     st.code("""
     import numpy as np
     import cv2
@@ -64,7 +64,7 @@ with subtab[3]:
     centers = np.uint8(centers)
     segmented_img = centers[labels.flatten()]
     segmented_img = segmented_img.reshape((img_color.shape))
-    st.image(image, caption="Clustered Image",use_column_width=False)
+    st.image(image, caption="Clustered Image",use_container_width=False)
     st.code("""
             import numpy as np
             import cv2
