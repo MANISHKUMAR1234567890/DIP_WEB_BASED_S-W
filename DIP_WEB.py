@@ -13,25 +13,25 @@ st.title("Interactive Digital Image Processing Software")
 import streamlit as st
 import base64
 
-def add_bg_from_local(image_file):
-    with open(image_file, "rb") as f:
-        data = f.read()
-    encoded = base64.b64encode(data).decode()
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("data:image/jpg;base64,{encoded}");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+# def add_bg_from_local(image_file):
+#     with open(image_file, "rb") as f:
+#         data = f.read()
+#     encoded = base64.b64encode(data).decode()
+#     st.markdown(
+#         f"""
+#         <style>
+#         .stApp {{
+#             background-image: url("data:image/jpg;base64,{encoded}");
+#             background-size: cover;
+#             background-position: center;
+#             background-attachment: fixed;
+#         }}
+#         </style>
+#         """,
+#         unsafe_allow_html=True
+#     )
 
-add_bg_from_local("image.png")
+# add_bg_from_local("image.png")
 
 
 st.markdown("""
@@ -62,7 +62,8 @@ Whether you're a student, researcher, or developer, this app will help you visua
 
 
 with tab[2]:
-    exec(open("chatbot.py").read())
+    exec(open("chatbot.py", encoding="utf-8").read())
+
     
 
 
@@ -77,25 +78,25 @@ with tab[4]:
     import streamlit as st
     import base64
 
-    def add_bg_from_local(image_file):
-        with open(image_file, "rb") as f:
-            data = f.read()
-        encoded = base64.b64encode(data).decode()
-        st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("data:image/jpg;base64,{encoded}");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    # def add_bg_from_local(image_file):
+    #     with open(image_file, "rb") as f:
+    #         data = f.read()
+    #     encoded = base64.b64encode(data).decode()
+    #     st.markdown(
+    #     f"""
+    #     <style>
+    #     .stApp {{
+    #         background-image: url("data:image/jpg;base64,{encoded}");
+    #         background-size: cover;
+    #         background-position: center;
+    #         background-attachment: fixed;
+    #     }}
+    #     </style>
+    #     """,
+    #     unsafe_allow_html=True
+    # )
 
-    add_bg_from_local("image.png")
+    # add_bg_from_local("image.png")
 
 
     st.markdown("""
