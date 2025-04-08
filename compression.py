@@ -22,7 +22,7 @@ with subtab[1]:
         compressed_pil = Image.open(compressed_bytes)
 
         # Display the compressed image in Streamlit
-        st.image(compressed_pil, caption="Lossless Compressed Image",use_column_width=False)
+        st.image(compressed_pil, caption="Lossless Compressed Image",use_container_width=False)
         st.code("""
                 import cv2
                 import numpy as np
@@ -65,7 +65,7 @@ with subtab[2]:
         compressed_pil = Image.open(compressed_bytes)
 
         # Display the compressed image in Streamlit
-        st.image(compressed_pil, caption="Lossy Compressed Image",use_column_width=False)
+        st.image(compressed_pil, caption="Lossy Compressed Image",use_container_width=False)
         st.code("""
                 import cv2
                 import numpy as np
