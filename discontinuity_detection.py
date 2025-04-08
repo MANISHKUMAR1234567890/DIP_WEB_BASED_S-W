@@ -15,7 +15,7 @@ if option == "Point Detection":
                            [1, -8, 1],
                            [1, 1, 1]])
         point_detected = cv2.filter2D(img, -1, kernel)
-        st.image(point_detected, caption="Point Discontinuity Detection", use_column_width=False)
+        st.image(point_detected, caption="Point Discontinuity Detection", use_container_width=False)
 
         st.code("""
         import cv2
@@ -53,7 +53,7 @@ elif option == "Line Detection":
                                [-1, -1, 2]])
 
         line_detected = cv2.filter2D(img, -1, kernel)
-        st.image(line_detected, caption=f"Line Discontinuity Detection ({direction})", use_column_width=False)
+        st.image(line_detected, caption=f"Line Discontinuity Detection ({direction})", use_container_width=False)
 
         st.code(f"""
         import cv2
@@ -138,5 +138,5 @@ img = np.array(image)
 edge = cv2.Canny(img, 50, 150)
 """
 
-    st.image(edge, caption=f"Edge Detection using {method}", use_column_width=False)
+    st.image(edge, caption=f"Edge Detection using {method}", use_container_width=False)
     st.code(code_str, language="python")
