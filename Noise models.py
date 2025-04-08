@@ -47,7 +47,7 @@ with subtab[1]:
     image = Image.open(uploaded_file).convert("RGB") 
     image_np = np.array(image)
     g_n=add_gaussian_noise(image_np,mean=0, sigma=25)
-    st.image(g_n,caption="Gaussian Noisy image",use_column_width=False)
+    st.image(g_n,caption="Gaussian Noisy image",use_container_width=False)
     st.code(""" 
             import numpy as np
             from PIL import Image
@@ -68,7 +68,7 @@ with subtab[2]:
     image = Image.open(uploaded_file).convert("RGB") 
     image_np = np.array(image)
     g_n=add_rayleigh_noise(image_np, sigma=30)
-    st.image(g_n,caption="Rayleigh Noisy image",use_column_width=False)
+    st.image(g_n,caption="Rayleigh Noisy image",use_container_width=False)
     st.code(""" 
             import numpy as np
             from PIL import Image
@@ -88,7 +88,7 @@ with subtab[3]:
     image = Image.open(uploaded_file).convert("RGB") 
     image_np = np.array(image)
     g_n=add_erlang_noise(image_np, k=2, theta=20)
-    st.image(g_n,caption="Erlang Noisy image",use_column_width=False)
+    st.image(g_n,caption="Erlang Noisy image",use_comtainer_width=False)
     st.code(""" 
             import numpy as np
             from PIL import Image
@@ -108,7 +108,7 @@ with subtab[4]:
     image = Image.open(uploaded_file).convert("RGB") 
     image_np = np.array(image)
     g_n=add_salt_and_pepper_noise(image_np, salt_prob=0.02, pepper_prob=0.02)
-    st.image(g_n,caption="Salt and pepper Noisy image",use_column_width=False)
+    st.image(g_n,caption="Salt and pepper Noisy image",use_container_width=False)
     st.code(""" 
             import numpy as np
             from PIL import Image
