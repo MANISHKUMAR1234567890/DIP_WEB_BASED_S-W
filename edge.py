@@ -15,7 +15,7 @@ with subtab[1]:
     sobel_edge = cv2.magnitude(sobel_x, sobel_y)
     # Normalize and convert to uint8 for display
     sobel_edge = np.uint8(255 * sobel_edge / np.max(sobel_edge))
-    st.image(sobel_edge,caption="Edges detected",use_column_width=False)
+    st.image(sobel_edge,caption="Edges detected",use_container_width=False)
     st.code("""
             import numpy as np
             import cv2
@@ -42,7 +42,7 @@ with subtab[2]:
     prewitt_y = cv2.filter2D(image_np, cv2.CV_32F, prewitt_kernel_y)
     prewitt_edge = cv2.magnitude(prewitt_x, prewitt_y)
     prewitt_edge = np.uint8(255 * prewitt_edge / np.max(prewitt_edge))
-    st.image(prewitt_edge,caption="Edges Detected",use_column_width=False)
+    st.image(prewitt_edge,caption="Edges Detected",use_container_width=False)
     st.code("""
             import numpy as np
             import cv2
@@ -69,7 +69,7 @@ with subtab[3]:
     canny_edge = cv2.Canny(image_np, 100, 200)  
     canny_edge_rgb = cv2.cvtColor(canny_edge, cv2.COLOR_GRAY2RGB)  # Convert to RGB for Streamlit
     # Display the image
-    st.image(canny_edge_rgb, caption="Edges detected", use_column_width=False)
+    st.image(canny_edge_rgb, caption="Edges detected", use_container_width=False)
     st.code("""
             import numpy as np
             import cv2
