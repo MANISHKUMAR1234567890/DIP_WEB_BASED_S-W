@@ -18,7 +18,7 @@ with subtab[1]:
     # Apply mean filter
         mean_filtered = cv2.filter2D(img_array, -1, mean_kernel)
         
-        st.image(mean_filtered,caption="Mean filtered image",use_column_width=False)
+        st.image(mean_filtered,caption="Mean filtered image",use_container_width=False)
         st.code("""
                 import cv2
                 import numpy as np
@@ -34,7 +34,7 @@ with subtab[1]:
         img=Image.open(uploaded_file)
         img_array=np.array(img, dtype=np.uint8)
         gausian_filter=cv2.GaussianBlur(img_array, (3,3), 1)
-        st.image(gausian_filter,caption="Gaussian filtered image",use_column_width=False)
+        st.image(gausian_filter,caption="Gaussian filtered image",use_container_width=False)
         st.code("""
                 import cv2
                 import numpy as np
@@ -49,7 +49,7 @@ with subtab[1]:
         img=Image.open(uploaded_file)
         img_array=np.array(img, dtype=np.uint8)
         median_filtered = cv2.medianBlur(img_array, 3)
-        st.image(median_filtered,caption="Median filtered image",use_column_width=False)
+        st.image(median_filtered,caption="Median filtered image",use_container_width=False)
         st.code("""
                 import cv2
                 import numpy as np
@@ -70,7 +70,7 @@ with subtab[2]:
         laplacian = cv2.Laplacian(img_array, cv2.CV_64F)  # Compute Laplacian (float64 output)
         laplacian_abs = cv2.convertScaleAbs(laplacian)  # Convert to uint8
         laplacian_sharpened = cv2.subtract(img_array, laplacian_abs)  # Sharpening by subtracting edges
-        st.image(laplacian_sharpened,caption="Laplacian fitered Image",use_column_width=False)
+        st.image(laplacian_sharpened,caption="Laplacian fitered Image",use_container_width=False)
         st.code("""
                 import numpy as np
                 import cv2
@@ -90,7 +90,7 @@ with subtab[2]:
         sobel_y = cv2.Sobel(img_array, cv2.CV_64F, 0, 1, ksize=5)
         sobel_combined = cv2.convertScaleAbs(cv2.addWeighted(sobel_x, 0.5, sobel_y, 0.5, 0))
 
-        st.image(sobel_combined,caption="Sobel fitered Image",use_column_width=False)
+        st.image(sobel_combined,caption="Sobel fitered Image",use_container_width=False)
         st.code("""
                 import numpy as np
                 import cv2
@@ -109,7 +109,7 @@ with subtab[2]:
         gaussian_blurred = cv2.GaussianBlur(img_array, (3,3), 1)  # Blur image
         unsharp_masked = cv2.addWeighted(img_array, 1.5, gaussian_blurred, -0.5, 0)  # Sharpen
 
-        st.image(unsharp_masked,caption="Unsharp masked Image",use_column_width=False)
+        st.image(unsharp_masked,caption="Unsharp masked Image",use_container_width=False)
         st.code("""
                 import numpy as np
                 import cv2
