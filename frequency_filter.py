@@ -57,7 +57,7 @@ with subtab[1]:
         ifft_image = (ifft_image - ifft_image.min()) / (ifft_image.max() - ifft_image.min()) * 255
         ifft_image = np.uint8(ifft_image)
 
-        st.image(ifft_image,caption="Ideal Low Pass Filtered Image",use_column_width=False)
+        st.image(ifft_image,caption="Ideal Low Pass Filtered Image",use_container_width=False)
         st.code("""
 import numpy as np
 from PIL import Image
@@ -105,7 +105,7 @@ ifft_image = apply_ifft(filtered_fft)""",language="python")
         ifft_image = (ifft_image - ifft_image.min()) / (ifft_image.max() - ifft_image.min()) * 255
         ifft_image = np.uint8(ifft_image)
 
-        st.image(ifft_image,caption="Gaussian Low Pass Filtered Image",use_column_width=False)
+        st.image(ifft_image,caption="Gaussian Low Pass Filtered Image",use_container_width=False)
         st.code("""
 import numpy as np
 from PIL import Image
@@ -142,7 +142,7 @@ ifft_image = apply_ifft(filtered_fft)
         ifft_image = (ifft_image - ifft_image.min()) / (ifft_image.max() - ifft_image.min()) * 255
         ifft_image = np.uint8(ifft_image)
 
-        st.image(ifft_image,caption="Butterworth Low Pass Filtered Image",use_column_width=False)
+        st.image(ifft_image,caption="Butterworth Low Pass Filtered Image",use_container_width=False)
         st.code("""import numpy as np
 from PIL import Image
 def apply_fft(image):
@@ -182,7 +182,7 @@ with subtab[2]:
         ifft_image = (ifft_image - ifft_image.min()) / (ifft_image.max() - ifft_image.min()) * 255
         ifft_image = np.uint8(ifft_image)
 
-        st.image(ifft_image,caption="Ideal Low Pass Filtered Image",use_column_width=False)
+        st.image(ifft_image,caption="Ideal Low Pass Filtered Image",use_container_width=False)
         st.code("""
 import numpy as np
 from PIL import Image
@@ -233,7 +233,7 @@ ifft_image = apply_ifft(filtered_fft)""",language="python")
         ifft_image = (ifft_image - ifft_image.min()) / (ifft_image.max() - ifft_image.min()) * 255
         ifft_image = np.uint8(ifft_image)
 
-        st.image(ifft_image,caption="Gaussian High Pass Filtered Image",use_column_width=False)
+        st.image(ifft_image,caption="Gaussian High Pass Filtered Image",use_container_width=False)
         st.code("""
 import numpy as np
 from PIL import Image
@@ -272,7 +272,7 @@ ifft_image = apply_ifft(filtered_fft)
         ifft_image = (ifft_image - ifft_image.min()) / (ifft_image.max() - ifft_image.min()) * 255
         ifft_image = np.uint8(ifft_image)
 
-        st.image(ifft_image,caption="Butterworth High Pass Filtered Image",use_column_width=False)
+        st.image(ifft_image,caption="Butterworth High Pass Filtered Image",use_container_width=False)
         st.code("""import numpy as np
 from PIL import Image
 def apply_fft(image):
